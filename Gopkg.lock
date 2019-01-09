@@ -3,11 +3,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:0a63f1876dd35eb7c501f9ef10edea87087395c309e37b53d9366c9a71899da4"
+  digest = "1:02956364cb39c505bea41a1a63bbf580a730dd70097ce1d99781ee4d138e1287"
   name = "github.com/quoeamaster/echogogo_plugin"
   packages = ["."]
   pruneopts = "UT"
-  revision = "d2fa9817d8889210d2d469aedd062d3c39e3189a"
+  revision = "64fc68b2ea1408154b4f42d31ed89e665bb18ddf"
 
 [solve-meta]
   analyzer-name = "dep"
