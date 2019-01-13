@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package echogogo_echo
+package main
 
 import "net/http"
 import "github.com/quoeamaster/echogogo_plugin"
