@@ -25,12 +25,18 @@ type EchoModule struct {
 
 }
 
-func (m *EchoModule) DoAction(request http.Request, response http.Response, endPoint string, optionalMap ...map[string]interface{}) interface{}  {
+/* (m *EchoModule)  */
+/*
+ * note: seems plugin api could only lookup 1st class level methods; hence if you have struct
+ * implementing an interface's method... the designated methods won't be lookup-able
+ */
+func DoAction(request http.Request, response http.Response, endPoint string, optionalMap ...map[string]interface{}) interface{}  {
 	/* usage: optionalMap[0] => 1st element in the optional parameter which is a map[string]interface{} */
 	return nil
 }
 
-func (m *EchoModule) GetRestConfig() echogogo.RestConfigModel {
+/* (m *EchoModule)  */
+func GetRestConfig() echogogo.RestConfigModel {
 	/* either read from a file or simply overwrite it programmatically.... */
 	modelPtr := new(echogogo.RestConfigModel)
 
