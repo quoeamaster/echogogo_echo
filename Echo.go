@@ -18,8 +18,10 @@
  */
 package main
 
-import "net/http"
-import "github.com/quoeamaster/echogogo_plugin"
+import (
+	"github.com/quoeamaster/echogogo_plugin"
+	"net/http"
+)
 
 type EchoModule struct {
 
@@ -36,8 +38,11 @@ func DoAction(request http.Request, response http.Response, endPoint string, opt
 }
 
 /* (m *EchoModule)  */
-func GetRestConfig() echogogo.RestConfigModel {
+// TODO: change it back to a Map instead???
+// TODO: create another method with a String param => see if it works or not... OR map param
+func GetRestConfig() map[string]interface{} {
 	/* either read from a file or simply overwrite it programmatically.... */
+	/*
 	modelPtr := new(echogogo.RestConfigModel)
 
 	modelPtr.ConsumeFormat = echogogo.FORMAT_JSON
@@ -46,4 +51,13 @@ func GetRestConfig() echogogo.RestConfigModel {
 	modelPtr.EndPoints = []string { "/", "/json", "/xml" }
 
 	return *modelPtr
+	*/
+	mapModelPtr := make(map[string]interface{})
+
+	mapModelPtr["consumeFormat"] = echogogo.FORMAT_JSON
+	mapModelPtr["produceFormat"] = echogogo.FORMAT_XML_JSON
+	mapModelPtr["path"] = "/echo"
+	mapModelPtr["endPoints"] = []string { "/", "/json", "/xml" }
+
+	return mapModelPtr
 }
