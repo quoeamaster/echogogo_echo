@@ -14,3 +14,5 @@
 # dep vendor
 vendor/*
 
+# local shell scripts for testing
+copy-plugin-to-repos.sh
